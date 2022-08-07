@@ -1,4 +1,4 @@
-# Python Video Downloader
+# Python Video & Audio Downloader
 Downloader de videos com script python
 # Como usar
 Requerimentos:
