@@ -1,15 +1,43 @@
-# Python Video & Audio Downloader
+# Python Youtube Video & Audio Downloader
 Downloader de videos com script python
-# Como usar
-Requerimentos:
--Pytube
-Abra o script em um IDE, execute ele e insira nos campos solicitados o URL do video do youtube que você deseja baixar e o local da biblioteca do seu computador onde você queira que o video fique salvo.
+### PT-BR
 
-OBS: No momento o script apenas baixa videos do youtube na resolução maxima disponivel
+## Requerimentos:
+```bash
+pip install pytube
+```
 
-# Atualizações futuras:
--Barra de loading no terminal
--Interface Grafica
--Diferentes resoluções disponiveis para baixar
--Baixar apenas audio de um vídeo
--Arquivo executavel
+## Como usar
+Execute o script, cole o URL do video, escreva onde você deseja salvar o archivo, selecione entre "baixar video" ou "baixar audio" e espere até que o download esteja terminado.
+
+## Atualizações futuras:
+- [ ] Barra de loading no terminal
+- [ ] Interface Grafica (GUI)
+- [ ] Diferentes resoluções disponiveis para baixar
+- [X] Baixar apenas audio de um vídeo
+- [ ] Arquivo executável
+- [ ] Baixar videos e audios de outras sites(Instagram e Twitter)
+
+## Contribuições
+Pull requests com qualquer nova modificação que melhoram o script são bem vindos😀.
+
+### ENG
+
+## Requirements
+```bash
+pip install pytube
+```
+
+## Usage
+Execute the script, paste the video URL, write where you want to save the file, select between “download video” or  “download only audio” and wait until is download is finished.
+
+## Future updates:
+- [ ] Progress bar in terminal
+- [ ] Graphic interface (GUI)
+- [ ] Diferent video resolutions to download
+- [X] Download only audio
+- [ ] Executable file
+- [ ] Download videos and audios from other websites (Instagram e Twitter)
+
+## Contributions
+Pull requests with any modification that improves the script are welcome😀.
