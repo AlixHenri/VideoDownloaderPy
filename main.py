@@ -1,50 +1,101 @@
 #pip install pytube
-#pip install tqdm
 from pytube import YouTube
-from tqdm import tqdm
 
-link = input("Digite a URL do vídeo que você deseja baixar: ")
-path = input("Digite o caminho onde deseja salvar o vídeo: ")
+print('''PyTube Downloader
+[1] Português Brasil
+[2] English''')
+lang = int(input())
 
-yt = YouTube(link)
+while lang !=1 or lang !=2:
+    if lang==1:
+        #PT-BR  
+
+        link = input("URL do vídeo: ")
+        path = input("Caminho da pasta de download: ")
+
+        yt = YouTube(link)
 
 
-print("[1] Baixar Video 🎬")
-print("[2] Baixar Audio 🎵")
-opcaoDownload = int(input())
+        print("[1] Baixar Video 🎬")
+        print("[2] Baixar Audio 🎵")
+        downloadOp = int(input())
 
-while opcaoDownload !=1 or opcaoDownload !=2:
+        while downloadOp !=1 or downloadOp !=2:
 
-    if opcaoDownload ==1:
+            if downloadOp==1:
 
-        result = {
-            "Título": yt.title,
-            "Número de views": yt.views,
-            "Duração do vídeo": yt.length,
-            "Avaliação do vídeo": yt.rating,
-        }
+                result = {
+                    "Título": yt.title,
+                    "Número de views": yt.views,
+                    "Duração do vídeo": yt.length,
+                    "Avaliação do vídeo": yt.rating,
+                }
 
-        print(result)
+                print(result)
 
-        yvideo = yt.streams.get_highest_resolution()
-        #Opções de resoluções diferentes para download
-        #Opção de baixar apenas audio
+                yvideo = yt.streams.get_highest_resolution()
+                print("Baixando....")
 
-        #Barra de progresso - Baixando: [----------]0% - Video Baixado com Sucesso[##########]100%
-        #Mensagem de erro - Não foi possivel baixar o video tente novamente
-        print("Baixando....")
+                yvideo.download(path)
+                print("Download feito com sucesso!")
 
-        yvideo.download(path)
-        print("Download feito com sucesso!")
+            elif downloadOp ==2:
+                yaudio = yt.streams.get_audio_only()
+                print("Baixando....")
 
-    elif opcaoDownload ==2:
-        yaudio = yt.streams.get_audio_only()
-        print("Baixando....")
+                yaudio.download(path)
+                print("Download feito com sucesso!")
+                break
+            
+            else:
+                print("Opção invalida, selecione a opção de download novamente")
+                downloadOp = int(input())
 
-        yaudio.download(path)
-        print("Download feito com sucesso!")
-        break
-    
+    elif lang==2:
+        #ENG
+        link = input("Video URL: ")
+        path = input("Download Path: ")
+
+        yt = YouTube(link)
+
+        print("[1] Download Video 🎬")
+        print("[2] Download Audio 🎵")
+        downloadOp = int(input())
+
+        while downloadOp !=1 or downloadOp !=2:
+
+            if downloadOp ==1:
+
+                result = {
+                    "Título": yt.title,
+                    "Número de views": yt.views,
+                    "Duração do vídeo": yt.length,
+                    "Avaliação do vídeo": yt.rating,
+                }
+
+                print(result)
+
+                yvideo = yt.streams.get_highest_resolution()
+                print("Downloading....")
+
+                yvideo.download(path)
+                print("Download completed successfully!")
+
+            elif downloadOp ==2:
+                yaudio = yt.streams.get_audio_only()
+                print("Downloading audio....")
+
+                yaudio.download(path)
+                print("Download completed successfully!")
+                break
+            
+            else:
+                print("Invalid option, select a download option again")
+                downloadOp = int(input())
+                break
+
     else:
-        print("Opção invalida, selecione a opção de download novamente")
-        opcaoDownload = int(input())
+        print('''PyTube Downloader
+[1] Português Brasil
+[2] English''')
+        lang = int(input())
