@@ -15,6 +15,7 @@ Execute o script, cole o URL do video, escreva onde você deseja salvar o archiv
 - [ ] Interface Grafica (GUI)
 - [ ] Diferentes resoluções disponiveis para baixar
 - [X] Baixar apenas audio de um vídeo
+- [X] Suporte em inglês e português
 - [ ] Arquivo executável
 - [ ] Baixar videos e audios de outras sites(Instagram e Twitter)
 
@@ -36,6 +37,7 @@ Execute the script, paste the video URL, write where you want to save the file, 
 - [ ] Graphic interface (GUI)
 - [ ] Diferent video resolutions to download
 - [X] Download only audio
+- [X] Language support to brazilian portuguese and english
 - [ ] Executable file
 - [ ] Download videos and audios from other websites (Instagram e Twitter)
 
