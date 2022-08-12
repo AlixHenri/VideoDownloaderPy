@@ -13,7 +13,7 @@ Execute o script, cole o URL do video, escreva onde você deseja salvar o archiv
 ## Atualizações futuras:
 - [ ] Barra de loading no terminal
 - [ ] Interface Grafica (GUI)
-- [ ] Diferentes resoluções disponiveis para baixar
+- [X] Diferentes resoluções disponiveis para baixar
 - [X] Baixar apenas audio de um vídeo
 - [X] Suporte em inglês e português
 - [ ] Arquivo executável
@@ -35,7 +35,7 @@ Execute the script, paste the video URL, write where you want to save the file, 
 ## Future updates:
 - [ ] Progress bar in terminal
 - [ ] Graphic interface (GUI)
-- [ ] Diferent video resolutions to download
+- [X] Diferent video resolutions to download
 - [X] Download only audio
 - [X] Language support to brazilian portuguese and english
 - [ ] Executable file
