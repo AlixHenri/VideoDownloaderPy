@@ -32,12 +32,31 @@ while lang !=1 or lang !=2:
                 }
 
                 print(result)
+                print('''Qualidade de resolução
+[1] Alta
+[2] Baixa''')
+                resolutionOp=int(input())
 
-                yvideo = yt.streams.get_highest_resolution()
-                print("Baixando....")
+                while resolutionOp !=1 or resolutionOp !=2:
 
-                yvideo.download(path)
-                print("Download feito com sucesso!")
+                    if resolutionOp==1:
+
+                        yvideo = yt.streams.get_highest_resolution()
+                        print("Baixando....")
+
+                        yvideo.download(path)
+                        print("Download feito com sucesso!")
+
+                    elif resolutionOp==2:
+                        yvideo = yt.streams.get_lowest_resolution()
+                        print("Baixando....")
+
+                        yvideo.download(path)
+                        print("Download feito com sucesso!")
+
+                    else:
+                         print('''Opção Invalida, tente novamQualidade de resol[1] [2] Baixa''')
+                    resolutionOp = int(input())
 
             elif downloadOp ==2:
                 yaudio = yt.streams.get_audio_only()
@@ -75,11 +94,35 @@ while lang !=1 or lang !=2:
 
                 print(result)
 
-                yvideo = yt.streams.get_highest_resolution()
-                print("Downloading....")
+                print(result)
+                print('''Resolution quality
+[1] High
+[2] Low''')
+                resolutionOp=int(input())
 
-                yvideo.download(path)
-                print("Download completed successfully!")
+                while resolutionOp !=1 or resolutionOp !=2:
+
+                    if resolutionOp==1:
+
+                        yvideo = yt.streams.get_highest_resolution()
+                        print("Downloading....")
+
+                        yvideo.download(path)
+                        print("Download completed succcessfully!")
+
+                    elif resolutionOp==2:
+                        yvideo = yt.streams.get_lowest_resolution()
+                        print("Downloading....")
+
+                        yvideo.download(path)
+                        print("Download completed successfully!")
+
+                    else:
+                         print('''Invalid option, try again
+Resolution Quality
+[1] High
+[2] Low''')
+                    resolutionOp = int(input())
 
             elif downloadOp ==2:
                 yaudio = yt.streams.get_audio_only()
@@ -92,7 +135,6 @@ while lang !=1 or lang !=2:
             else:
                 print("Invalid option, select a download option again")
                 downloadOp = int(input())
-                break
 
     else:
         print('''PyTube Downloader
